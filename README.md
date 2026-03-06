@@ -109,7 +109,7 @@ The urgency banner fires automatically on page load when any pending task is due
 
 | Name | Role |
 |------|------|
-| You | Creator & Project Owner |
+| Stuart Moore (https://github.com/samoore) | Creator & Project Owner |
 | [Claude](https://claude.ai) (Anthropic) | Initial build, mobile UX, alert system |
 
 ---
