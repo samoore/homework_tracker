@@ -602,6 +602,224 @@
 
   .alert-snooze-btn:hover { background: #e2e8f0; color: #334155; }
 
+  /* ── BACKUP BAR ─────────────────────────────────── */
+  .backup-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 16px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 2px dashed #e2e8f0;
+    flex-wrap: wrap;
+  }
+
+  .backup-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94a3b8;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  .backup-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .backup-btn.export {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 2px solid #bbf7d0;
+  }
+
+  .backup-btn.export:hover {
+    background: #dcfce7;
+    border-color: #86efac;
+    transform: translateY(-1px);
+  }
+
+  .backup-btn.import {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 2px solid #bfdbfe;
+  }
+
+  .backup-btn.import:hover {
+    background: #dbeafe;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+  }
+
+  .backup-btn.restore {
+    background: #fdf4ff;
+    color: #7e22ce;
+    border: 2px solid #e9d5ff;
+  }
+
+  .backup-btn.restore:hover {
+    background: #f3e8ff;
+    border-color: #d8b4fe;
+    transform: translateY(-1px);
+  }
+
+  .backup-meta {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  /* ── IMPORT CONFIRM MODAL ────────────────────────── */
+  .import-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,30,0.65);
+    backdrop-filter: blur(4px);
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .import-overlay.visible { display: flex; }
+
+  .import-box {
+    background: white;
+    border-radius: 20px;
+    max-width: 420px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+    animation: popIn 0.25s cubic-bezier(0.34,1.56,0.64,1);
+  }
+
+  .import-header {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    padding: 20px 24px 16px;
+  }
+
+  .import-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .import-body {
+    padding: 20px 24px;
+  }
+
+  .import-body p {
+    font-size: 0.92rem;
+    color: #475569;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .import-stats {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+
+  .import-warning {
+    background: #fff7ed;
+    border: 2px solid #fed7aa;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #9a3412;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .import-footer {
+    padding: 14px 24px 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .import-merge-btn {
+    flex: 1;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 3px 10px rgba(59,130,246,0.35);
+  }
+
+  .import-merge-btn:hover { transform: translateY(-1px); }
+
+  .import-replace-btn {
+    flex: 1;
+    background: #fff1f2;
+    color: #be123c;
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.95rem;
+    border: 2px solid #fecdd3;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .import-replace-btn:hover { background: #ffe4e6; }
+
+  .import-cancel-btn {
+    background: #f1f5f9;
+    color: #64748b;
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .import-cancel-btn:hover { background: #e2e8f0; }
+
+  @media (max-width: 640px) {
+    .backup-bar { padding: 12px 14px; gap: 8px; }
+    .backup-meta { display: none; }
+    .backup-btn { font-size: 0.85rem; padding: 8px 12px; }
+    .import-footer { flex-wrap: wrap; }
+    .import-merge-btn, .import-replace-btn { flex: 1 1 calc(50% - 5px); }
+    .import-cancel-btn { flex: 1 1 100%; }
+  }
+
   /* ── MOBILE CARD VIEW ────────────────────────────── */
   .hw-card {
     display: none; /* shown only on mobile */
@@ -826,6 +1044,16 @@
     </button>
   </div>
 
+  <!-- BACKUP BAR -->
+  <div class="backup-bar">
+    <span class="backup-label">💾 Backup</span>
+    <button class="backup-btn export" onclick="exportBackup()">⬇️ Save to File</button>
+    <button class="backup-btn import" onclick="document.getElementById('importFileInput').click()">⬆️ Load from File</button>
+    <button class="backup-btn restore" id="restoreAutoBtn" onclick="restoreAutoBackup()" style="display:none">🔁 Restore Auto-Save</button>
+    <input type="file" id="importFileInput" accept=".json" style="display:none" onchange="handleImportFile(event)">
+    <span class="backup-meta" id="backupMeta">Checking auto-backup…</span>
+  </div>
+
   <!-- TABS -->
   <div class="tabs">
     <button class="tab-btn active-tab" id="tabTodo" onclick="switchTab('todo')">📋 To Do</button>
@@ -892,6 +1120,25 @@
 
 </main>
 
+<!-- ── IMPORT CONFIRM MODAL ───────────────────── -->
+<div class="import-overlay" id="importOverlay">
+  <div class="import-box">
+    <div class="import-header">
+      <div class="import-title">⬆️ Import Backup</div>
+    </div>
+    <div class="import-body">
+      <p>Found a backup file with:</p>
+      <div class="import-stats" id="importStats">Loading…</div>
+      <div class="import-warning">⚠️ <span><strong>Replace</strong> will delete all current tasks first. <strong>Merge</strong> adds the backup tasks alongside what you already have (duplicates skipped).</span></div>
+    </div>
+    <div class="import-footer">
+      <button class="import-merge-btn" onclick="confirmImport('merge')">🔀 Merge</button>
+      <button class="import-replace-btn" onclick="confirmImport('replace')">🔄 Replace All</button>
+      <button class="import-cancel-btn" onclick="cancelImport()">Cancel</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <!-- BOTTOM NAV (mobile only) -->
@@ -923,8 +1170,74 @@
   let tasks = JSON.parse(localStorage.getItem('hwTasks') || '[]');
   let currentTab = 'todo';
 
+  // ── AUTO-BACKUP to Origin Private File System ─────
+  // OPFS is a private sandboxed storage area in the browser — separate
+  // from localStorage and NOT cleared when the browser clears site data.
+  // Writes happen silently in the background with no file picker needed.
+  const OPFS_FILENAME = 'homework-hero-autobackup.json';
+  const opfsSupported = ('storage' in navigator && 'getDirectory' in navigator.storage);
+  let lastAutoBackupTime = null;
+
+  async function autoBackupToOPFS() {
+    if (!opfsSupported) return;
+    try {
+      const root     = await navigator.storage.getDirectory();
+      const fh       = await root.getFileHandle(OPFS_FILENAME, { create: true });
+      const writable = await fh.createWritable();
+      const payload  = {
+        app: 'HomeworkHero',
+        version: '1.3.0',
+        autoBackup: true,
+        savedAt: new Date().toISOString(),
+        taskCount: tasks.length,
+        tasks,
+      };
+      await writable.write(JSON.stringify(payload, null, 2));
+      await writable.close();
+      lastAutoBackupTime = new Date();
+      updateBackupMeta();
+    } catch (err) {
+      console.warn('OPFS auto-backup failed:', err);
+    }
+  }
+
+  async function loadAutoBackupFromOPFS() {
+    if (!opfsSupported) return null;
+    try {
+      const root = await navigator.storage.getDirectory();
+      const fh   = await root.getFileHandle(OPFS_FILENAME);
+      const file = await fh.getFile();
+      return JSON.parse(await file.text());
+    } catch {
+      return null; // no file yet — that's fine on first run
+    }
+  }
+
+  function updateBackupMeta() {
+    const el = document.getElementById('backupMeta');
+    if (!el) return;
+    if (!opfsSupported) {
+      el.textContent = 'Auto-backup not supported in this browser';
+      return;
+    }
+    if (lastAutoBackupTime) {
+      const t = lastAutoBackupTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      el.innerHTML = `🟢 Auto-saved at ${t}`;
+    } else {
+      el.textContent = 'Auto-backup pending…';
+    }
+  }
+
+  // Debounce: rapid changes (e.g. bulk import) collapse into one write
+  let autoBackupTimer = null;
+  function scheduleAutoBackup() {
+    clearTimeout(autoBackupTimer);
+    autoBackupTimer = setTimeout(() => autoBackupToOPFS(), 800);
+  }
+
   function save() {
     localStorage.setItem('hwTasks', JSON.stringify(tasks));
+    scheduleAutoBackup(); // silently write to OPFS in the background
   }
 
   function getSubjectKey(subjectStr) {
@@ -1158,6 +1471,119 @@
     toastTimer = setTimeout(() => t.classList.remove('show'), 2400);
   }
 
+  // ── BACKUP: EXPORT (manual file download) ─────────
+  function exportBackup() {
+    const payload = {
+      app: 'HomeworkHero',
+      version: '1.3.0',
+      exportedAt: new Date().toISOString(),
+      taskCount: tasks.length,
+      tasks: tasks,
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    const dateStr = new Date().toISOString().slice(0, 10);
+    a.href = url;
+    a.download = `homework-hero-backup-${dateStr}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast(`💾 File saved! (${tasks.length} task${tasks.length !== 1 ? 's' : ''})`);
+  }
+
+  // ── BACKUP: RESTORE from OPFS auto-save ───────────
+  async function restoreAutoBackup() {
+    const data = await loadAutoBackupFromOPFS();
+    if (!data || !Array.isArray(data.tasks)) {
+      showToast('❌ No auto-backup found');
+      return;
+    }
+    // Reuse the existing import modal
+    const valid = data.tasks.filter(t => t && typeof t.id === 'string' && typeof t.subject === 'string');
+    pendingImportTasks = valid;
+    const todo = valid.filter(t => !t.done).length;
+    const done = valid.filter(t =>  t.done).length;
+    const d    = data.savedAt ? new Date(data.savedAt) : null;
+    document.getElementById('importStats').innerHTML =
+      `📋 <strong>${todo}</strong> to-do task${todo !== 1 ? 's' : ''} &nbsp;·&nbsp; 🏆 <strong>${done}</strong> completed` +
+      (d ? `<br><small style="color:#94a3b8;font-weight:600">Auto-saved ${d.toLocaleString('en-GB', { weekday:'short', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })}</small>` : '');
+    document.getElementById('importOverlay').classList.add('visible');
+  }
+
+  // ── BACKUP: IMPORT ─────────────────────────────────
+  let pendingImportTasks = null;
+
+  function handleImportFile(event) {
+    const file = event.target.files[0];
+    // Reset the input so the same file can be re-imported if needed
+    event.target.value = '';
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = JSON.parse(e.target.result);
+
+        // Accept either our wrapped format or a raw array
+        const imported = Array.isArray(data) ? data : (data.tasks || null);
+        if (!imported || !Array.isArray(imported)) {
+          showToast('❌ File not recognised — is it a Homework Hero backup?');
+          return;
+        }
+
+        // Basic validation: each item needs at least an id and subject
+        const valid = imported.filter(t => t && typeof t.id === 'string' && typeof t.subject === 'string');
+        if (valid.length === 0) {
+          showToast('❌ Backup file has no valid tasks');
+          return;
+        }
+
+        pendingImportTasks = valid;
+        const todo = valid.filter(t => !t.done).length;
+        const done = valid.filter(t => t.done).length;
+        document.getElementById('importStats').innerHTML =
+          `📋 <strong>${todo}</strong> to-do task${todo !== 1 ? 's' : ''} &nbsp;·&nbsp; 🏆 <strong>${done}</strong> completed`;
+        if (data.exportedAt) {
+          const d = new Date(data.exportedAt);
+          document.getElementById('importStats').innerHTML +=
+            `<br><small style="color:#94a3b8;font-weight:600">Saved on ${d.toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short', year:'numeric' })}</small>`;
+        }
+        document.getElementById('importOverlay').classList.add('visible');
+      } catch {
+        showToast('❌ Couldn\'t read the file — it may be corrupted');
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function confirmImport(mode) {
+    if (!pendingImportTasks) return;
+    document.getElementById('importOverlay').classList.remove('visible');
+
+    if (mode === 'replace') {
+      tasks = pendingImportTasks;
+    } else {
+      // Merge: add tasks whose id isn't already present
+      const existingIds = new Set(tasks.map(t => t.id));
+      const newTasks = pendingImportTasks.filter(t => !existingIds.has(t.id));
+      tasks = [...tasks, ...newTasks];
+      const skipped = pendingImportTasks.length - newTasks.length;
+      if (skipped > 0) showToast(`🔀 Merged! (${skipped} duplicate${skipped>1?'s':''} skipped)`);
+    }
+
+    pendingImportTasks = null;
+    save();
+    render();
+    if (mode === 'replace') showToast('✅ All tasks replaced from backup!');
+    else if (!document.querySelector('.toast.show')) showToast('✅ Backup merged in!');
+  }
+
+  function cancelImport() {
+    pendingImportTasks = null;
+    document.getElementById('importOverlay').classList.remove('visible');
+    showToast('↩️ Import cancelled');
+  }
+
   // ── URGENCY ALERT ─────────────────────────────────
   function getUrgentTasks() {
     const today = new Date(); today.setHours(0,0,0,0);
@@ -1246,6 +1672,34 @@
 
   render();
   checkAndShowAlert();
+
+  // ── STARTUP: check for existing OPFS auto-backup ──
+  // Show the Restore button if a backup file exists, and update meta label
+  (async () => {
+    if (!opfsSupported) {
+      updateBackupMeta();
+      return;
+    }
+    const existing = await loadAutoBackupFromOPFS();
+    if (existing && Array.isArray(existing.tasks) && existing.tasks.length > 0) {
+      // A previous auto-backup exists — show the restore button
+      const btn = document.getElementById('restoreAutoBtn');
+      if (btn) btn.style.display = 'flex';
+      // If we have no local tasks yet (e.g. data was cleared), surface a hint
+      if (tasks.length === 0 && existing.tasks.length > 0) {
+        const d = existing.savedAt ? new Date(existing.savedAt) : null;
+        const when = d ? d.toLocaleString('en-GB', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' }) : 'previously';
+        const el = document.getElementById('backupMeta');
+        if (el) el.innerHTML = `⚡ Auto-backup from ${when} available`;
+      } else {
+        // Write an initial auto-backup right away so OPFS is current
+        await autoBackupToOPFS();
+      }
+    } else {
+      // No prior backup — write one now so it exists from this point on
+      await autoBackupToOPFS();
+    }
+  })();
 </script>
 </body>
 </html>
